@@ -1,0 +1,181 @@
+.site {
+    padding: 2rem 2rem;
+}
+
+.banner {
+    box-sizing: border-box;
+    height: 60px;
+    border: 1px solid gray;
+    width: 488px;
+    background: url('../img/schermCode.png') center center no-repeat;
+    background-size: cover;
+    color: #fff;
+    overflow: hidden;
+    font-family: 'Muli', sans-serif;
+    font-size: 2rem;
+    animation: picAnimation 8s alternate infinite;
+    cursor: pointer;
+}
+
+.banner:hover .banner__item {
+    background: red;
+    transition: background .25s;
+}
+
+@keyframes picAnimation {
+    0%, 10% {
+        background-position: top;
+    }
+
+    90%, 100% {
+        background-position: bottom;
+    }
+}
+
+.banner__layer-one {
+    display: grid;
+    grid-template-columns: repeat(4, auto) 58px;
+    padding-left: 60px;
+    transition: margin .5s cubic-bezier(.58, .15, .36, 1.31);
+    overflow: hidden;
+}
+
+.banner__layer-one > div {
+    height: 60px;
+    line-height: 58px;
+}
+
+.banner__alisha, .banner__van, .banner__caspel, .banner__nl, .banner__item,
+.banner__html, .banner__css, .banner__js {
+    transition: transform .5s cubic-bezier(.58, .15, .36, 1.31);
+}
+
+.banner__alisha.banner--off {
+    transform: translateY(-60px);
+}
+.banner__van.banner--off {
+    transform: translateY(60px);
+}
+.banner__caspel.banner--off {
+    transform: translateY(-60px);
+}
+.banner__nl.banner--off {
+    transform: translateY(60px);
+}
+
+.banner__wiggle {
+    display: inline-block;
+}
+.banner__wiggle.banner--wiggle {
+    animation: wiggle 1s forwards;
+}
+
+@keyframes wiggle {
+    0%, 70%, 100% {
+        transform: rotate(0);
+    } 10% {
+        transform: rotate(-23deg);
+    } 20% {
+        transform: rotate(20deg);
+    } 30% {
+        transform: rotate(-10deg);
+    } 40% {
+        transform: rotate(10deg);
+    } 50% {
+        transform: rotate(-6deg);
+    } 60% {
+        transform: rotate(3deg);
+    }
+
+}
+
+.banner__nl {
+    color: #333;
+    z-index: 2;
+}
+
+.banner__layer-one .banner__item {
+    width: 1.6em;
+    height: 1.6em;
+    background: #fff;
+    border-radius: 1em;
+    align-self: center;
+    transform: translateX(-1.8em) translateY(0);
+}
+
+.banner__item.banner--off {
+    transform: translateX(-1.8em) translateY(-60px);
+}
+
+.banner__layer-one.banner--off {
+    margin: -60px 0 0 0;
+}
+
+.banner__layer-twoo {
+    display: grid;
+    grid-template-columns: 1fr 60px 60px 60px;
+    background: rgba(255, 255, 255, .5);
+    line-height: 60px;
+    overflow: hidden;
+}
+
+.banner__babe {
+    letter-spacing: -.1em;
+    padding-left: 60px;
+}
+
+.banner__babe.banner--off span {
+    animation: blob .7s forwards;
+    display: inline-block;
+    opacity: 0;
+}
+
+@keyframes blob {
+    0% {
+        opacity: 0;
+        transform: scale(9);
+    } 90% {
+        opacity: 1;
+        transform: scale(.9);
+    } 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.banner__babe.banner--off .L2 { animation-delay: .1s; }
+.banner__babe.banner--off .L3 { animation-delay: .2s; }
+.banner__babe.banner--off .L4 { animation-delay: .3s; }
+.banner__babe.banner--off .L5 { animation-delay: .4s; }
+.banner__babe.banner--off .L6 { animation-delay: .5s; }
+.banner__babe.banner--off .L7 { animation-delay: .6s; }
+.banner__babe.banner--off .L8 { animation-delay: .7s; }
+.banner__babe.banner--off .L9 { animation-delay: .8s; }
+
+.banner__html, .banner__css {
+    height: 50px;
+    align-self: center;
+}
+
+.banner__html.banner--off {
+    transform: translateY(-60px);
+}
+
+.banner__css.banner--off {
+    transform: translateY(60px);
+}
+
+.banner__js.banner--off {
+    transform: translateX(60px);
+}
+
+.banner__js {
+    height: 60px;
+}
+
+#validatie img {
+    height: 1em;
+    width: auto;
+    border: 0;
+    margin: 0 .3em;
+}
