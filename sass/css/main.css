@@ -1,0 +1,125 @@
+html, body, h3 {
+  padding: 0;
+  margin: 0;
+  font-family: "Avenir", "sans-serif"; }
+
+header {
+  padding: 2em; }
+
+header, aside {
+  background-color: #f2e3e3; }
+
+h1, .tagline {
+  color: #8e5454; }
+
+section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-bottom: .2em; }
+
+.nummer {
+  background-color: #8e5454;
+  color: #fff;
+  font-size: 3em;
+  width: 1.2em;
+  text-align: right;
+  padding: .2em; }
+
+article {
+  padding: 1em; }
+
+section img {
+  max-width: 100%; }
+
+aside h3 {
+  background-color: #8e5454;
+  color: #fff;
+  padding: 2em; }
+aside ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+aside a {
+  text-decoration: none;
+  padding: 2em;
+  display: block;
+  color: #8e5454; }
+aside a:hover {
+  background-color: #8e5454;
+  color: #fff;
+  padding: 2em; }
+
+footer {
+  background-color: #4f2d2d;
+  color: #fff;
+  padding: 2em; }
+
+@media screen and (min-width: 760px) {
+  .img {
+    display: block;
+    background: url("../img/ziekenhuis.jpeg") center center no-repeat;
+    background-size: cover; }
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "kop kop" "t1 t2" "t3 t4" "img t5" "img t6" "img t7" "t8 aside" "t9 aside" "t10 aside" "voet voet"; }
+
+  header {
+    grid-area: kop; }
+
+  .orthopedie {
+    grid-area: t1; }
+
+  .intensive {
+    grid-area: t2; }
+
+  .logopedie {
+    grid-area: t3; }
+
+  .podotheraphie {
+    grid-area: t4; }
+
+  .urologie {
+    grid-area: t5; }
+
+  .geriatrie {
+    grid-area: t6; }
+
+  .palliative {
+    grid-area: t7; }
+
+  .hart {
+    grid-area: t8; }
+
+  .kanker {
+    grid-area: t9; }
+
+  .neurologisch {
+    grid-area: t10; }
+
+  .img {
+    grid-area: img; }
+
+  aside {
+    grid-area: aside; }
+
+  footer {
+    grid-area: voet; }
+
+  .orthopedie_article {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+
+  .orthopedie_article h3 {
+    grid-column: span 2; }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr auto; } }
+@media screen and (min-width: 1000px) {
+  body {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "kop kop kop" "t1 t2 img" "t3 t4 img" "t5 t6 t6" "aside t7 t8" "aside t9 t10" "voet voet voet"; } }
+
+/*# sourceMappingURL=main.css.map */
