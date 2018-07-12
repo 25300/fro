@@ -1,0 +1,41 @@
+@import "vars";
+@import "breakpoint";
+@import "header";
+@import "aside";
+
+
+html, body, h3 {
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+}
+
+h1, .tagline {color: $color-dark;}
+
+section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-bottom: .2em;
+}
+
+.nummer {
+  background-color: $color-dark;
+  color: $color-white;
+  font-size: 3em;
+  width: 1.2em;
+  text-align: right;
+  padding: .2em;
+}
+
+article { padding: 1em; }
+
+section {
+  img {max-width: 100%;}
+}
+
+footer {
+  background-color: $color-extradark;
+  color: $color-white;
+  padding: $padding-aside;
+}
+

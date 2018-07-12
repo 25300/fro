@@ -1,0 +1,28 @@
+aside{background-color: $color-light}
+
+aside {
+  h3 {
+    background-color: $color-dark;
+    color: $color-white;
+    padding: $padding-aside;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none;
+    padding: $padding-aside;
+    display: block;
+    color: $color-dark;
+  }
+
+  a:hover {
+    background-color: $color-dark;
+    color: $color-white;
+    padding: $padding-aside;
+  }
+}
