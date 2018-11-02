@@ -1,0 +1,15 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+footer {
+    background-color: #77797c;
+    width: 100vw;
+    height: 75px;
+}
