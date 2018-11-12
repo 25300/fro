@@ -1,0 +1,36 @@
+@import "../mixins/colors.scss";
+.col {
+    padding: 0;
+    cursor: pointer;
+}
+
+
+
+.img__titel {
+    position: absolute;
+    color: $white;
+    bottom: .0rem;
+    left: 2rem;
+    font-size: 2rem;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .img__titel {
+        font-size: 1.2rem;
+    }
+}
+
+@media  (max-width: 425px) {
+    .img__titel {
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .img__titel {
+        font-size: .7rem;
+    }
+}

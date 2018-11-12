@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAQ;EACJ,OAAO,EAAE,IAAI;;AAGjB,aAAc;EACV,YAAY,EAAE,IAAI;;ACJtB,IAAK;EACD,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,OAAO;;AAKnB,WAAY;EACR,QAAQ,EAAE,QAAQ;EAClB,KAAK,ECVD,IAAI;EDWR,MAAM,EAAE,KAAK;EACb,IAAI,EAAE,IAAI;EACV,SAAS,EAAE,IAAI;;AAMnB,yBAA0B;EACtB,WAAY;IACR,SAAS,EAAE,MAAM;AAIzB,yBAA2B;EACvB,WAAY;IACR,SAAS,EAAE,KAAK;AAIxB,yBAA0B;EACtB,WAAY;IACR,SAAS,EAAE,KAAK;AEjCxB,KAAM;EACF,aAAa,EAAE,IAAI;;ACDvB,gBAAiB;EACb,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;;AAG3B,UAAW;EACP,KAAK,EFLD,IAAI",
+"sources": ["../scss/components/nav.scss","../scss/components/header.scss","../scss/mixins/colors.scss","../scss/components/carousel.scss","../scss/components/pagination.scss"],
+"names": [],
+"file": "custom.css"
+}
