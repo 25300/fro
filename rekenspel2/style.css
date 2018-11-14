@@ -13,9 +13,9 @@ html, body {
 
 .wrapper {
   border: 1px solid black;
-  width: 13rem;
+  width: 20rem;
   padding: 30px;
-  background-color: #8d80ff;
+  background-color: #976f99;
 }
 
 .mijnOpgave {
@@ -30,18 +30,20 @@ html, body {
 }
 
 .input {
-  margin-left: 2.4rem;
+  margin-left: 5.5rem;
   padding: 5px;
 }
 
 .output {
-  margin-left: 3rem;
+  margin-left: 6.5rem;
 }
 
 .goed{
-  background-color:#02ff41;
+  background-color: #029d2c;
+  color: #fff;
 }
 
 .fout{
-  background-color:#ff0101;
+  background-color: #a10101;
+  color: #fff;
 }
