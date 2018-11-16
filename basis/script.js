@@ -1,7 +1,7 @@
 "use strict";
 
 // Declare variables
-const studentName = "Alisha";
+const studentName = "Alisha van Caspel";
 const studentGroup = "MD2A";
 const year = main.year;
 
@@ -13,8 +13,25 @@ init();
 function init() {
     // Set content based on variables
     document.getElementById("studentName").innerText = studentName;
+
+    let name = document.getElementsByClassName('studentName');
+    for (var i = 0; i < name.length; i ++) {
+        name[i].innerText = studentName;
+    }
+
+    let group = document.getElementsByClassName('studentGroup');
+    for (var i = 0; i < group.length; i ++) {
+        group[i].innerText = studentGroup;
+    }
+
+    let currentYear = document.getElementsByClassName('pageYear');
+    for (var i = 0; i < currentYear.length; i ++) {
+        currentYear[i].innerText = year;
+    }
+
     // Add navigation link to the navigation panel on the left of the page
     main.addContenItem("Inleiding", intro);
+    main.addContenItem("Variabelen", variables);
     // Activate the first navigation link
     intro();
 }
@@ -37,7 +54,7 @@ function intro() {
 
     // Create the label
     var label = document.createElement("label");
-    label.innerHTML = "Brendan Eich";
+    label.innerHTML = "Alisha van Caspel";
 
     // Create the paragraph and add the image and label to it
     var p = document.createElement("p");
@@ -47,4 +64,30 @@ function intro() {
     
     // Add the paragraph to the DOM
     element.appendChild(p); 
+}
+
+function variables() {
+    var postcode = '1234AB';
+    var huisnummer = 99;
+    var datum = '2018-01-01';
+    var gas = 300;
+    var water = 30;
+    var electriciteit = [1001, 1002];
+    var slimmeMeter = true;
+
+    if (slimmeMeter = true) {
+        slimmeMeter = ". Dit is gedaan met een slimme meter."
+    }
+
+    var title = "<h4>Verslag van de meting</h4>";
+    var verslag = "Voor postcode " + postcode + " en huisnummer " + huisnummer + " zijn op " + datum + " metingen gedaan " +
+        "en dit zijn de resultaten: gas=" + gas + ", water=" + water + ", electriciteitHoog=" + electriciteit[1] + " en electriciteitLaag=" + electriciteit[0] + slimmeMeter;
+
+    var eigenschappenTitel = "<h4>Nog wat eigenschappen</h4>";
+    var tekens = verslag.length;
+    var eigenschappen = "Het verslag heeft " + tekens + " tekens."
+
+    var result = title + verslag + eigenschappenTitel + eigenschappen;
+
+    main.updateContent("Variabelen", result)
 }
