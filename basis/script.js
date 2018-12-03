@@ -32,6 +32,8 @@ function init() {
     // Add navigation link to the navigation panel on the left of the page
     main.addContenItem("Inleiding", intro);
     main.addContenItem("Variabelen", variables);
+    main.addContenItem("Object", object);
+    main.addContenItem("Array", array);
     // Activate the first navigation link
     intro();
 }
@@ -67,27 +69,135 @@ function intro() {
 }
 
 function variables() {
-    var postcode = '1234AB';
-    var huisnummer = 99;
-    var datum = '2018-01-01';
-    var gas = 300;
-    var water = 30;
-    var electriciteit = [1001, 1002];
-    var slimmeMeter = true;
+    let postcode = '1234AB';
+    let huisnummer = 99;
+    let datum = '2018-01-01';
+    let gas = 300;
+    let water = 30;
+    let electriciteit = [1001, 1002];
+    let slimmeMeter = true;
 
     if (slimmeMeter = true) {
         slimmeMeter = ". Dit is gedaan met een slimme meter."
     }
 
-    var title = "<h4>Verslag van de meting</h4>";
-    var verslag = "Voor postcode " + postcode + " en huisnummer " + huisnummer + " zijn op " + datum + " metingen gedaan " +
+    let title = "<h4>Verslag van de meting</h4>";
+    let verslag = "Voor postcode " + postcode + " en huisnummer " + huisnummer + " zijn op " + datum + " metingen gedaan " +
         "en dit zijn de resultaten: gas=" + gas + ", water=" + water + ", electriciteitHoog=" + electriciteit[1] + " en electriciteitLaag=" + electriciteit[0] + slimmeMeter;
 
-    var eigenschappenTitel = "<h4>Nog wat eigenschappen</h4>";
-    var tekens = verslag.length;
-    var eigenschappen = "Het verslag heeft " + tekens + " tekens."
 
-    var result = title + verslag + eigenschappenTitel + eigenschappen;
+    let eigenschappenTitel = "<h4>Nog wat eigenschappen</h4>";
+    let tekens = verslag.length;
+    let eigenschappen = "Het verslag heeft " + tekens + " tekens. Het laatste woord is: ";
+
+    let result = title + verslag + eigenschappenTitel + eigenschappen;
 
     main.updateContent("Variabelen", result)
+}
+
+function object() {
+    let eigenschappen = {
+        postcode: "1234AB",
+        huisnummer: 99,
+        datum: "2018-01-01",
+        gas: 300,
+        water: 30,
+        electriciteit: [1001, 1002],
+        slimmeMeter: true
+    };
+
+    if (eigenschappen.slimmeMeter = true) {
+        eigenschappen.slimmeMeter = "<p>Dit is gedaan met een slimme meter.</p>"
+    }
+
+    let title = "<h4>Verslag van de meting</h4>";
+    let verslag = "<p>Voor postcode " + eigenschappen.postcode + " en huisnummer " + eigenschappen.huisnummer + "</p>";
+    let tabel = "<table>" +
+        "<tr>" +
+        "<td>Gas:</td>" +
+        "<td>" + eigenschappen.gas +"</td>" +
+        "</tr>" +
+        "<tr>" +
+        "<td>Water:</td>" +
+        "<td>" + eigenschappen.water +"</td>" +
+        "</tr>" +
+        "<tr>" +
+        "<td>Electriciteit hoog:</td>" +
+        "<td>" + eigenschappen.electriciteit[1] +"</td>" +
+        "</tr>" +
+        "<tr>" +
+        "<td>Electriciteit laag:</td>" +
+        "<td>" + eigenschappen.electriciteit[0] +"</td>" +
+        "</tr>" +
+        "</table>";
+
+    let result = title + verslag + tabel + eigenschappen.slimmeMeter;
+
+    main.updateContent("Object", result)
+
+}
+
+function array() {
+    let eigenschappen1 = {
+        postcode: "1234AB",
+        huisnummer: 99,
+        datum: "2018-01-01",
+        gas: 300,
+        water: 30,
+        electriciteit: [1001, 1002],
+        slimmeMeter: true
+    };
+
+    let eigenschappen2 = {
+        postcode: "1234AB",
+        huisnummer: 45,
+        datum: "2018-01-01",
+        gas: 1300,
+        water: 130,
+        electriciteit: [11001, 11002],
+        slimmeMeter: false
+    };
+
+    let eigenschappen = [];
+    eigenschappen.push(eigenschappen1);
+    eigenschappen.push(eigenschappen2);
+
+    for (let i = 0; i < eigenschappen.length; i++) {
+        console.log(eigenschappen[i]);
+    }
+
+    let title = "<h4>Overzicht van de metingen voor postcode 1234AB</h4>";
+    let tabel = "<table>" +
+        "<tr>" +
+        "<td>Postcode</td>" +
+        "<td>Huisnummer</td>" +
+        "<td>Datum</td>" +
+        "<td>Gas</td>" +
+        "<td>Water</td>" +
+        "<td>Electriciteit</td>" +
+        "<td>slimmeMeter</td>" +
+        "</tr>" +
+        "<tr>" +
+        "<td>" + eigenschappen1.postcode +"</td>" +
+        "<td>" + eigenschappen1.huisnummer +"</td>" +
+        "<td>" + eigenschappen1.datum +"</td>" +
+        "<td>" + eigenschappen1.gas +"</td>" +
+        "<td>" + eigenschappen1.water +"</td>" +
+        "<td>" + eigenschappen1.electriciteit[0] + "," + eigenschappen1.electriciteit[1] +"</td>" +
+        "<td>" + eigenschappen1.slimmeMeter +"</td>" +
+        "</tr>" +
+        "<tr>" +
+        "<td>" + eigenschappen2.postcode +"</td>" +
+        "<td>" + eigenschappen2.huisnummer +"</td>" +
+        "<td>" + eigenschappen2.datum +"</td>" +
+        "<td>" + eigenschappen2.gas +"</td>" +
+        "<td>" + eigenschappen2.water +"</td>" +
+        "<td>" + eigenschappen2.electriciteit[0] + "," + eigenschappen2.electriciteit[1] +"</td>" +
+        "<td>" + eigenschappen2.slimmeMeter +"</td>" +
+        "</tr>" +
+        "</table>";
+
+    let result = title + tabel;
+
+    main.updateContent("Array", result)
 }
